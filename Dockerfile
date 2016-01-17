@@ -7,7 +7,7 @@ RUN apt-get install -y build-essential make curl
 RUN apt-get install -y vagrant
 RUN apt-get install -y vim
 RUN apt-get install -y gcc
-RUN apt-get install -y gcc-c++
+# RUN apt-get install -y gcc-c++
 RUN apt-get install -y strace
 RUN apt-get install -y vim-enhanced
 RUN apt-get install -y dos2unix
