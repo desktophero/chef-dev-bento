@@ -39,4 +39,5 @@ RUN chef gem install \
   rake:10.4.2 \
   chef-sugar:3.1.1 \
   statsd:0.5.4 \
+  consul-kv \
   --no-ri --no-rdoc
