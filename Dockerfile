@@ -6,6 +6,15 @@ RUN apt-get install -y wget curl git apt-transport-https software-properties-com
 RUN apt-get install -y build-essential make curl
 RUN apt-get install -y vagrant
 RUN apt-get install -y vim
+RUN apt-get install -y gcc
+RUN apt-get install -y gcc-c++
+RUN apt-get install -y strace
+RUN apt-get install -y vim-enhanced
+RUN apt-get install -y dos2unix
+RUN apt-get install -y libxml2-devel
+RUN apt-get install -y libvslt-devel
+RUN apt-get install -y lsof
+RUN apt-get install -y git
 
 # For those CI environments
 RUN locale-gen en_US.UTF-8
