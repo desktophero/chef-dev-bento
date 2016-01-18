@@ -9,7 +9,7 @@ RUN apt-get install -y vim
 RUN apt-get install -y gcc
 # RUN apt-get install -y gcc-c++
 RUN apt-get install -y strace
-RUN apt-get install -y vim-enhanced
+# RUN apt-get install -y vim-enhanced
 RUN apt-get install -y dos2unix
 RUN apt-get install -y libxml2-devel
 RUN apt-get install -y libvslt-devel
