@@ -1,4 +1,4 @@
-FROM centos:centos6.7
+FROM centos:centos6
 MAINTAINER Jason Walker <desktophero@gmail.com>
 
 RUN yum install -y git
