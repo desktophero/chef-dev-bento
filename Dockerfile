@@ -1,7 +1,7 @@
 FROM centos:centos6
 MAINTAINER Jason Walker <desktophero@gmail.com>
 
-RUN yum install -y git
+RUN yum install -y git wget
 RUN yum install -y vim
 RUN yum install -y unzip vim gcc gcc-c++ strace dos2unix libxml2-devel libxslt-devel git expect libxml2 ipmitool curl lsof vagrant
 
