@@ -1,28 +1,17 @@
-FROM ubuntu:14.04.3
+FROM centos/centos6.7
 MAINTAINER Jason Walker <desktophero@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y wget curl git apt-transport-https software-properties-common make
-RUN apt-get install -y build-essential make curl
-RUN apt-get install -y vagrant
-RUN apt-get install -y vim
-RUN apt-get install -y gcc
-# RUN apt-get install -y gcc-c++
-RUN apt-get install -y strace
-# RUN apt-get install -y vim-enhanced
-RUN apt-get install -y dos2unix
-RUN apt-get install -y libxml2-devel
-RUN apt-get install -y libvslt-devel
-RUN apt-get install -y lsof
-RUN apt-get install -y git
+RUN yum install -y git
+RUN yum install -y vim
+RUN yum install -y unzip vim gcc gcc-c++ strace dos2unix libxml2-devel libxslt-devel git expect libxml2 ipmitool curl lsof vagrant
 
 # For those CI environments
 RUN locale-gen en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
-RUN wget --no-check-certificate https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.10.0-1_amd64.deb -O ~/chefdk.deb
-RUN dpkg -i ~/chefdk.deb && rm -rf ~/chefdk.deb
+RUN wget --no-check-certificate https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.10.0-1.el6.x86_64.rpm ~/chefdk.rpm
+RUN rpm -i ~/chefdk.rpm
 
 ENV PATH="/opt/chefdk/bin:/root/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ENV GEM_ROOT="/opt/chefdk/embedded/lib/ruby/gems/2.1.0"
