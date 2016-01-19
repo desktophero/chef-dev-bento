@@ -5,11 +5,6 @@ RUN yum install -y git
 RUN yum install -y vim
 RUN yum install -y unzip vim gcc gcc-c++ strace dos2unix libxml2-devel libxslt-devel git expect libxml2 ipmitool curl lsof vagrant
 
-# For those CI environments
-RUN locale-gen en_US.UTF-8
-ENV LANG       en_US.UTF-8
-ENV LC_ALL     en_US.UTF-8
-
 RUN wget --no-check-certificate https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chefdk-0.10.0-1.el6.x86_64.rpm ~/chefdk.rpm
 RUN rpm -i ~/chefdk.rpm
 
