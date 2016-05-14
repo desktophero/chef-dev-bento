@@ -29,4 +29,5 @@ RUN chef gem install \
   chef-sugar:3.1.1 \
   statsd:0.5.4 \
   consul-kv \
+  chef-vault-testfixtures 0.5.2 \
   --no-ri --no-rdoc
